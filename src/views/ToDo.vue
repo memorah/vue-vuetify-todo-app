@@ -1,5 +1,5 @@
 <template>
-  <v-list flat>
+  <v-list class="pt-0" flat>
     <div v-for="task in tasks" :key="task.id">
       <v-list-item>
         <template v-slot:default="{ active }">
