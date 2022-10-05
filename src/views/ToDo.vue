@@ -1,7 +1,15 @@
 <template>
   <v-list class="pt-0" flat>
-    <div v-for="task in tasks" :key="task.id">
+    <div>
+      <v-text-field
+        class="pa-5"
+        outlined
+        label="Append"
+        append-icon="mdi-plus-box"
+      ></v-text-field>
       <v-list-item
+        v-for="task in tasks"
+        :key="task.id"
         @click="doneTask(task.id)"
         :class="{ 'green lighten-5': task.done }"
       >
