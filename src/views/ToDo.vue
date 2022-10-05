@@ -2,10 +2,15 @@
   <v-list class="pt-0" flat>
     <div>
       <v-text-field
-        class="pa-5"
+        v-model="newTaskTitle"
+        @click:append="addTask"
+        @keyop.enter="addTask"
+        class="pa-3"
         outlined
-        label="Append"
-        append-icon="mdi-plus-box"
+        label="Add Task"
+        append-icon="mdi-plus"
+        hide-details
+        clearable
       ></v-text-field>
       <v-list-item
         v-for="task in tasks"
@@ -41,6 +46,7 @@ export default {
   name: "ToDo",
   data() {
     return {
+      newTaskTitle: "",
       tasks: [
         {
           id: 1,
@@ -61,6 +67,15 @@ export default {
     };
   },
   methods: {
+    addTask() {
+      let newTask = {
+        id: Date.now(),
+        title: this.newTaskTitle,
+        done: false,
+      };
+      this.tasks.push(newTask);
+    },
+
     doneTask(id) {
       let task = this.tasks.filter((task) => task.id === id)[0];
       task.done = !task.done;
