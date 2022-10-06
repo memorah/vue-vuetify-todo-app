@@ -1,46 +1,7 @@
 <template>
   <div class="home">
-    <v-text-field
-      v-model="newTaskTitle"
-      @click:append="addTask"
-      @keyup.enter="addTask"
-      class="pa-3"
-      outlined
-      label="Add Task"
-      append-icon="mdi-plus"
-      hide-details
-      clearable
-    ></v-text-field>
-
-    <v-list v-if="$store.state.tasks.length" class="pt-0" flat>
-      <div v-for="task in $store.state.tasks" :key="task.id">
-        <v-list-item
-          @click="doneTask(task.id)"
-          :class="{ 'blue lighten-5': task.done }"
-        >
-          <template v-slot:default>
-            <v-list-item-action>
-              <v-checkbox :input-value="task.done" color="primary"></v-checkbox>
-            </v-list-item-action>
-
-            <v-list-item-content>
-              <v-list-item-title
-                :class="{ 'text-decoration-line-through': task.done }"
-              >
-                {{ task.title }}
-              </v-list-item-title>
-            </v-list-item-content>
-
-            <v-list-item-action>
-              <v-btn @click.stop="deleteTask(task.id)" icon>
-                <v-icon color="primary lighten-1">mdi-delete</v-icon>
-              </v-btn>
-            </v-list-item-action>
-          </template>
-        </v-list-item>
-        <v-divider></v-divider>
-      </div>
-    </v-list>
+    <field-add-task />
+    <list-tasks v-if="$store.state.tasks.length" />
     <div v-else class="no-tasks-box">
       <div class="no-tasks">
         <v-icon size="50" color="primary"> mdi-meditation </v-icon>
@@ -52,17 +13,11 @@
 
 <script>
 export default {
-  name: "ToDO",
-  data() {
-    return {
-      newTaskTitle: "",
-    };
-  },
-  methods: {
-    addTask() {
-      this.$store.commit("addTask", this.newTaskTitle);
-      this.newTaskTitle = "";
-    },
+  name: "ToDo",
+
+  components: {
+    "field-add-task": require("@/components/Todo/FieldAddTask.vue").default,
+    "list-tasks": require("@/components/Todo/ListTasks.vue").default,
   },
 };
 </script>
