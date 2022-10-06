@@ -6,7 +6,7 @@
       <v-card-text>Are you sure you wanna delete this task?</v-card-text>
       <v-card-actions>
         <v-spacer></v-spacer>
-        <v-btn color="green darken-1" text @click="dialog = false">
+        <v-btn color="green darken-1" text @click="$emit('close')">
           Back
         </v-btn>
         <v-btn
