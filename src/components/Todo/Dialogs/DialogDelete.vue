@@ -2,20 +2,19 @@
   <v-dialog :value="true">
     persistent max-width="290">
     <v-card>
-      <v-card-title class="text-h5">
-        Use Google's location service?
-      </v-card-title>
-      <v-card-text
-        >Let Google help apps determine location. This means sending anonymous
-        location data to Google, even when no apps are running.</v-card-text
-      >
+      <v-card-title class="text-h5"> Delete task? </v-card-title>
+      <v-card-text>Are you sure you wanna delete this task?</v-card-text>
       <v-card-actions>
         <v-spacer></v-spacer>
         <v-btn color="green darken-1" text @click="dialog = false">
-          Disagree
+          Back
         </v-btn>
-        <v-btn color="green darken-1" text @click="dialog = false">
-          Agree
+        <v-btn
+          color="green darken-1"
+          text
+          @click="$store.dispatch('deleteTask', task.id)"
+        >
+          DELETE
         </v-btn>
       </v-card-actions>
     </v-card>
@@ -23,7 +22,9 @@
 </template>
 
 <script>
-export default {};
+export default {
+  props: ["task"],
+};
 </script>
 
 <style></style>
