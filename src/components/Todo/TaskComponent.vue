@@ -16,7 +16,12 @@
             {{ task.title }}
           </v-list-item-title>
         </v-list-item-content>
-
+        <v-list-item-action v-if="task.dueDate">
+          <v-list-item-action-text class="d-flex justify-space-between">
+            <v-icon small class="pr-1">mdi-alarm-check</v-icon>
+            {{ task.dueDate }}</v-list-item-action-text
+          >
+        </v-list-item-action>
         <v-list-item-action>
           <task-menu :task="task" />
         </v-list-item-action>
