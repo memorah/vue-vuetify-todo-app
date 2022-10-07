@@ -30,6 +30,7 @@
       color="primary"
       dark
       prominent
+      height="170"
       src="https://picsum.photos/1920/1080?random"
       fade-img-on-scroll
       scroll-threshold="500"
@@ -48,8 +49,14 @@
           <search />
         </v-row>
         <v-row>
-          <v-app-bar-title class="ml-3">Title LONG lOgn</v-app-bar-title>
+          <v-app-bar-title class="text-h4 ml-3"
+            >ToDo
+            <span class="text-subtitle-2"> by mackov.dev</span></v-app-bar-title
+          >
         </v-row>
+        <live-date-time />
+
+        <v-row> </v-row>
       </v-container>
     </v-app-bar>
 
@@ -72,6 +79,8 @@ export default {
   components: {
     search: require("@/components/Todo/Tools/SearchTask.vue").default,
     snackbar: require("@/components/Shared/SnackBar.vue").default,
+    "live-date-time": require("@/components/Todo/Tools/LiveDateTime.vue")
+      .default,
   },
 };
 </script>
