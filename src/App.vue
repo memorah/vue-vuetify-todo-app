@@ -46,17 +46,9 @@
       <v-app-bar-title>Title</v-app-bar-title>
 
       <v-spacer></v-spacer>
-
+      <search />
       <v-btn icon>
         <v-icon>mdi-magnify</v-icon>
-      </v-btn>
-
-      <v-btn icon>
-        <v-icon>mdi-heart</v-icon>
-      </v-btn>
-
-      <v-btn icon>
-        <v-icon>mdi-dots-vertical</v-icon>
       </v-btn>
     </v-app-bar>
 
@@ -77,6 +69,7 @@ export default {
     ],
   }),
   components: {
+    search: require("@/components/Todo/Tools/SearchTask.vue").default,
     snackbar: require("@/components/Shared/SnackBar.vue").default,
   },
 };
