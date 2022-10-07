@@ -32,7 +32,6 @@
       prominent
       src="https://picsum.photos/1920/1080?random"
       fade-img-on-scroll
-      scroll-target="#scrolling-techniques-5"
       scroll-threshold="500"
     >
       <template v-slot:img="{ props }">
