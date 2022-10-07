@@ -40,13 +40,17 @@
           gradient="to top right, rgba(55,236,186,.7), rgba(25,32,72,.7)"
         ></v-img>
       </template>
+      <v-container class="px-0">
+        <v-row>
+          <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
 
-      <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
-
-      <v-app-bar-title>Title</v-app-bar-title>
-
-      <v-spacer></v-spacer>
-      <search />
+          <v-spacer></v-spacer>
+          <search />
+        </v-row>
+        <v-row>
+          <v-app-bar-title class="ml-3">Title LONG lOgn</v-app-bar-title>
+        </v-row>
+      </v-container>
     </v-app-bar>
 
     <v-main>
