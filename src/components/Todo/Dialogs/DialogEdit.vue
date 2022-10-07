@@ -4,7 +4,7 @@
     <v-card>
       <v-card-title class="text-h5"> Edit Task? </v-card-title>
       <v-card-text>Edit the title of this task?</v-card-text>
-      <v-text-field v-model="taskTitle" class="px-6" />
+      <v-text-field v-model="taskTitle" @keyup.enter="saveTask" class="px-6" />
       <v-card-actions>
         <v-spacer></v-spacer>
         <v-btn color="green darken-1" text @click="$emit('close')">
@@ -31,6 +31,7 @@ export default {
         title: this.taskTitle,
       };
       this.$store.commit("updateTaskTitle", payload);
+      this.$emit("close");
     },
   },
   mounted() {
