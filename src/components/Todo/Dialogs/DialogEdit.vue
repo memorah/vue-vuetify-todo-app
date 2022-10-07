@@ -10,7 +10,14 @@
         <v-btn color="green darken-1" text @click="$emit('close')">
           Cancel
         </v-btn>
-        <v-btn color="green darken-1" text @click="saveTask"> Save </v-btn>
+        <v-btn
+          @click="saveTask"
+          :disabled="taskTitleInvalid"
+          color="green darken-1"
+          text
+        >
+          Save
+        </v-btn>
       </v-card-actions>
     </v-card>
   </v-dialog>
@@ -24,14 +31,21 @@ export default {
       taskTitle: null,
     };
   },
+  computed: {
+    taskTitleInvalid() {
+      return !this.taskTitle || this.taskTitle === this.task.title;
+    },
+  },
   methods: {
     saveTask() {
-      let payload = {
-        id: this.task.id,
-        title: this.taskTitle,
-      };
-      this.$store.commit("updateTaskTitle", payload);
-      this.$emit("close");
+      if (!this.taskTitleInvalid) {
+        let payload = {
+          id: this.task.id,
+          title: this.taskTitle,
+        };
+        this.$store.commit("updateTaskTitle", payload);
+        this.$emit("close");
+      }
     },
   },
   mounted() {
