@@ -42,7 +42,7 @@
           gradient="to top right, rgba(0,0,0,0), rgba(0,0,0,.8)"
         ></v-img>
       </template>
-      <v-container class="px-0">
+      <v-container class="header-container px-0">
         <v-row>
           <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
 
@@ -85,8 +85,7 @@ export default {
   },
 };
 </script>
-<style scoped>
-v-img.menu-img {
-  background-position: right;
-}
+<style lang="sass">
+.header-container
+ max-width: none!important
 </style>
