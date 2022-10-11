@@ -7,7 +7,7 @@ Vue.use(VueRouter);
 const routes = [
   {
     path: "/",
-    name: "ToDo",
+    name: "by mackov.dev",
     component: ToDo,
   },
   {
@@ -27,7 +27,7 @@ const router = new VueRouter({
   routes,
 });
 router.beforeEach((to, from, next) => {
-  document.title = `ToDo - ${to.name}`;
+  document.title = `${process.env.VUE_APP_TITLE} - ${to.name}`;
   next();
 });
 
