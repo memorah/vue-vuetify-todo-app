@@ -1,11 +1,18 @@
 <template>
   <v-app id="inspire">
-    <v-navigation-drawer v-model="drawer" app>
+    <v-navigation-drawer v-model="drawer" app :mobile-breakpoint="768">
       <v-img
+        class="pa-4 pt-7"
         src="@/assets/header-img.jpg"
         height="170"
-        gradient="to top right, rgba(0,0,0,.1), rgba(0,0,0,.7)"
-      ></v-img>
+        gradient="to top right, rgba(0,0,0,0.8), rgba(0,0,0,0)"
+      >
+        <v-avatar size="60" class="mb-2">
+          <img src="https://i.pravatar.cc/" alt="avatar" />
+        </v-avatar>
+        <div class="white--text text-subtitle-1 font-weight-bold">John Doe</div>
+        <div class="white--text text-subtitle-2">Bratislava</div>
+      </v-img>
 
       <v-list dense nav>
         <v-list-item v-for="item in items" :key="item.title" :to="item.to" link>
@@ -32,7 +39,7 @@
       <template v-slot:img="{ props }">
         <v-img
           v-bind="props"
-          gradient="to top right, rgba(0,0,0,.7), rgba(0,0,0,.1)"
+          gradient="to top right, rgba(0,0,0,0), rgba(0,0,0,.8)"
         ></v-img>
       </template>
       <v-container class="px-0">
@@ -64,7 +71,7 @@
 <script>
 export default {
   data: () => ({
-    drawer: null,
+    drawer: true,
     items: [
       { title: "ToDo", icon: "mdi-format-list-checks", to: "/" },
       { title: "About", icon: "mdi-help-box", to: "/about" },
