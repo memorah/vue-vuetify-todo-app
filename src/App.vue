@@ -1,16 +1,11 @@
 <template>
   <v-app id="inspire">
     <v-navigation-drawer v-model="drawer" app>
-      <v-list-item>
-        <v-list-item-content>
-          <v-list-item-title class="text-h6">
-            ToDo | Vuetify
-          </v-list-item-title>
-          <v-list-item-subtitle> by mackov.dev </v-list-item-subtitle>
-        </v-list-item-content>
-      </v-list-item>
-
-      <v-divider></v-divider>
+      <v-img
+        src="@/assets/header-img.jpg"
+        height="170"
+        gradient="to top right, rgba(0,0,0,.1), rgba(0,0,0,.7)"
+      ></v-img>
 
       <v-list dense nav>
         <v-list-item v-for="item in items" :key="item.title" :to="item.to" link>
@@ -31,14 +26,13 @@
       dark
       prominent
       height="170"
-      src="https://picsum.photos/1920/1080?random"
-      fade-img-on-scroll
+      src="@/assets/header-img.jpg"
       scroll-threshold="500"
     >
       <template v-slot:img="{ props }">
         <v-img
           v-bind="props"
-          gradient="to top right, rgba(55,236,186,.7), rgba(25,32,72,.7)"
+          gradient="to top right, rgba(0,0,0,.7), rgba(0,0,0,.1)"
         ></v-img>
       </template>
       <v-container class="px-0">
@@ -84,3 +78,8 @@ export default {
   },
 };
 </script>
+<style scoped>
+v-img.menu-img {
+  background-position: right;
+}
+</style>
