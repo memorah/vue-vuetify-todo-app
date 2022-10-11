@@ -1,6 +1,6 @@
 <template>
   <div class="about pa-6">
-    <h1>This is an about page</h1>
+    <h1>About this {{ $store.state.appTitle }} app</h1>
     <p>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel suscipit
       dolor, nec luctus orci. Aenean lobortis arcu a orci sagittis, a mollis

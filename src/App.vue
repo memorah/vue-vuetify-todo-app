@@ -51,7 +51,7 @@
         </v-row>
         <v-row>
           <v-app-bar-title class="text-h4 ml-3"
-            >{{ appTitle }}
+            >{{ $store.state.appTitle }}
             <span class="text-subtitle-2"> by mackov.dev</span></v-app-bar-title
           >
         </v-row>
@@ -77,11 +77,6 @@ export default {
       { title: "About", icon: "mdi-help-box", to: "/about" },
     ],
   }),
-  computed: {
-    appTitle() {
-      return process.env.VUE_APP_TITLE;
-    },
-  },
   components: {
     search: require("@/components/Todo/Tools/SearchTask.vue").default,
     snackbar: require("@/components/Shared/SnackBar.vue").default,
