@@ -77,6 +77,9 @@ export default {
       { title: "About", icon: "mdi-help-box", to: "/about" },
     ],
   }),
+  mounted() {
+    this.$store.dispatch("getTasks");
+  },
   components: {
     search: require("@/components/Todo/Tools/SearchTask.vue").default,
     snackbar: require("@/components/Shared/SnackBar.vue").default,
