@@ -37,7 +37,7 @@ export default {
   props: ["task"],
   filters: {
     niceDate(value) {
-      return format(new Date(value), "MMM d");
+      return format(new Date(value), "MMM dd");
       //=> 'Oct 7'
     },
   },
