@@ -4,7 +4,7 @@
       <v-img
         class="pa-4 pt-7"
         src="@/assets/header-img.jpg"
-        height="170"
+        height="220"
         gradient="to top right, rgba(0,0,0,0.8), rgba(0,0,0,0)"
       >
         <v-avatar size="60" class="mb-2">
@@ -32,7 +32,7 @@
       color="primary"
       dark
       prominent
-      height="170"
+      height="220"
       src="@/assets/header-img.jpg"
       scroll-threshold="500"
     >
@@ -57,7 +57,7 @@
         </v-row>
         <live-date-time />
 
-        <v-row> </v-row>
+        <v-row> <field-add-task class="mt-3" /></v-row>
       </v-container>
     </v-app-bar>
 
@@ -71,7 +71,7 @@
 <script>
 export default {
   data: () => ({
-    drawer: true,
+    drawer: null,
     items: [
       { title: "ToDo", icon: "mdi-format-list-checks", to: "/" },
       { title: "About", icon: "mdi-help-box", to: "/about" },
@@ -85,6 +85,7 @@ export default {
     snackbar: require("@/components/Shared/SnackBar.vue").default,
     "live-date-time": require("@/components/Todo/Tools/LiveDateTime.vue")
       .default,
+    "field-add-task": require("@/components/Todo/FieldAddTask.vue").default,
   },
 };
 </script>
