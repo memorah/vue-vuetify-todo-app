@@ -148,6 +148,14 @@ export default new Vuex.Store({
           commit("showSnackbar", "Due Date updated!");
         });
     },
+    setTasks({ commit }, tasks) {
+      db.collection("tasks")
+        .set(tasks)
+        .then(() => {
+          commit("setTasks", tasks);
+        });
+    },
+
     getTasks({ commit }) {
       db.collection("tasks")
         .get()
