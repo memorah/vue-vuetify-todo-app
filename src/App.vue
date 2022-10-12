@@ -4,7 +4,7 @@
       <v-img
         class="pa-4 pt-7"
         src="@/assets/header-img.jpg"
-        height="220"
+        height="170"
         gradient="to top right, rgba(0,0,0,0.8), rgba(0,0,0,0)"
       >
         <v-avatar size="60" class="mb-2">
@@ -32,7 +32,7 @@
       color="primary"
       dark
       prominent
-      height="220"
+      :height="$route.path === '/' ? '238' : '170'"
       src="@/assets/header-img.jpg"
       scroll-threshold="500"
     >
