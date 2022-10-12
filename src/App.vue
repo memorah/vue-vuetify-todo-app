@@ -57,7 +57,9 @@
         </v-row>
         <live-date-time />
 
-        <v-row> <field-add-task class="mt-3" /></v-row>
+        <v-row v-if="$route.path === '/'"
+          ><field-add-task class="mt-3"
+        /></v-row>
       </v-container>
     </v-app-bar>
 
