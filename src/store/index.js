@@ -31,6 +31,7 @@ export default new Vuex.Store({
       show: false,
       ext: "",
     },
+    sorting: false,
   },
 
   getters: {
