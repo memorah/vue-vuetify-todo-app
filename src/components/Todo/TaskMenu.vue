@@ -2,7 +2,7 @@
   <div>
     <v-menu bottom left>
       <template v-slot:activator="{ on, attrs }">
-        <v-btn color="primary" icon v-bind="attrs" v-on="on">
+        <v-btn color="teal darken-4" icon v-bind="attrs" v-on="on">
           <v-icon>mdi-dots-vertical</v-icon>
         </v-btn>
       </template>
@@ -14,9 +14,11 @@
           @click="handleClick(index)"
         >
           <v-list-item-icon>
-            <v-icon v-text="item.icon"></v-icon>
+            <v-icon color="teal darken-4" v-text="item.icon"></v-icon>
           </v-list-item-icon>
-          <v-list-item-title>{{ item.title }}</v-list-item-title>
+          <v-list-item-title color="teal darken-4">{{
+            item.title
+          }}</v-list-item-title>
         </v-list-item>
       </v-list>
     </v-menu>

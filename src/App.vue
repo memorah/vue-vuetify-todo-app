@@ -94,7 +94,7 @@ export default {
 .header-container
  max-width: none!important
 .menu-drawer
- background-color: #152223!important
+ background-color: #004D40!important
 .theme--light.v-list-item:not(.v-list-item--active):not(.v-list-item--disabled),.theme--light.v-icon
   color: rgba(299, 299, 299, 0.87)
 </style>

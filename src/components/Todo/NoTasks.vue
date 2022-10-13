@@ -1,8 +1,8 @@
 <template>
   <div class="no-tasks-box">
     <div class="no-tasks">
-      <v-icon size="50" color="primary"> mdi-meditation </v-icon>
-      <div class="text-h5 primary--text">No tasks</div>
+      <v-icon size="50" color="teal darken-4"> mdi-meditation </v-icon>
+      <div class="text-h5 teal--text text--darken-4">No tasks</div>
     </div>
   </div>
 </template>

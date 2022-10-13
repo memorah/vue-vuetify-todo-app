@@ -2,12 +2,15 @@
   <div>
     <v-list-item
       @click="$store.dispatch('doneTask', task.id)"
-      :class="{ 'blue lighten-5': task.done }"
-      class="white"
+      :class="{ 'teal lighten-5': task.done }"
+      color="teal darken-4"
     >
       <template v-slot:default>
         <v-list-item-action>
-          <v-checkbox :input-value="task.done" color="primary"></v-checkbox>
+          <v-checkbox
+            :input-value="task.done"
+            color="teal darken-4"
+          ></v-checkbox>
         </v-list-item-action>
 
         <v-list-item-content>
@@ -27,7 +30,7 @@
           <task-menu :task="task" />
         </v-list-item-action>
         <v-list-item-action v-if="$store.state.sorting">
-          <v-btn color="primary" icon class="handle">
+          <v-btn color="teal darken-4" icon class="handle">
             <v-icon>mdi-drag-horizontal-variant</v-icon>
           </v-btn>
         </v-list-item-action>
