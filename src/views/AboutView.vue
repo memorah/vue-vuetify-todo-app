@@ -2,31 +2,25 @@
   <div class="about pa-6">
     <h1>About this {{ $store.state.appTitle }} app</h1>
     <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel suscipit
-      dolor, nec luctus orci. Aenean lobortis arcu a orci sagittis, a mollis
-      erat egestas. Suspendisse convallis maximus dui, quis luctus massa
-      tristique sodales. Duis tempor mi orci, eget elementum erat venenatis eu.
-      Duis lobortis erat arcu, vel posuere ante aliquet in. Nulla gravida cursus
-      est, et lacinia urna vestibulum in. In viverra elementum ultrices. In
-      auctor lacinia congue.
+      I created this app as a Vue.js learning project. I used the following
+      tools:
+    </p>
+    <p>Vue CLI, a full system for rapid Vue.js development</p>
+    <p>Vue Route, a official library for page navigation in Vue applications</p>
+    <p>Vuex, a state management pattern + library for Vue.js applications.</p>
+    <p>Vuetify - Material Design Framework</p>
+    <p>Environment Variables</p>
+    <p>
+      Localbase, a offline database with the simplicity & power of Firebase, all
+      stored in the user's browser (in an IndexedDB database).
     </p>
     <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel suscipit
-      dolor, nec luctus orci. Aenean lobortis arcu a orci sagittis, a mollis
-      erat egestas. Suspendisse convallis maximus dui, quis luctus massa
-      tristique sodales. Duis tempor mi orci, eget elementum erat venenatis eu.
-      Duis lobortis erat arcu, vel posuere ante aliquet in. Nulla gravida cursus
-      est, et lacinia urna vestibulum in. In viverra elementum ultrices. In
-      auctor lacinia congue.
+      VueDraggable, a Vue component allowing drag-and-drop and synchronization
+      with view model array.
     </p>
     <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel suscipit
-      dolor, nec luctus orci. Aenean lobortis arcu a orci sagittis, a mollis
-      erat egestas. Suspendisse convallis maximus dui, quis luctus massa
-      tristique sodales. Duis tempor mi orci, eget elementum erat venenatis eu.
-      Duis lobortis erat arcu, vel posuere ante aliquet in. Nulla gravida cursus
-      est, et lacinia urna vestibulum in. In viverra elementum ultrices. In
-      auctor lacinia congue.
+      Date-fns, a simple and consistent toolset for manipulating JavaScript
+      dates in a browser & Node.js.
     </p>
   </div>
 </template>
