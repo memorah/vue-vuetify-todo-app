@@ -53,7 +53,7 @@
       <template v-slot:img="{ props }">
         <v-img
           v-bind="props"
-          gradient="to top right, rgba(0,0,0,0), rgba(0,0,0,.8)"
+          gradient="to top , rgba(0,0,0,0),rgba(0,77,64,1)"
         ></v-img>
       </template>
       <v-container class="header-container px-0">
