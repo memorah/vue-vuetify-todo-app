@@ -6,7 +6,7 @@
     persistent
     width="290px"
   >
-    <v-date-picker v-model="date" scrollable>
+    <v-date-picker color="teal darken-4" v-model="date" scrollable>
       <v-spacer></v-spacer>
       <v-btn text color="teal darken-4" @click="$emit('close')"> Cancel </v-btn>
       <v-btn text color="teal darken-4" @click="saveTask"> OK </v-btn>
