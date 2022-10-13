@@ -92,7 +92,11 @@ export default {
       { title: "About", icon: "mdi-help-box", to: "/about" },
     ],
     links: [
-      { title: "mackov.dev", icon: "mdi-link-variant", to: "/mackov-dev" },
+      {
+        title: "mackov.dev",
+        icon: "mdi-link-variant",
+        to: "https://mackov.dev",
+      },
       {
         title: "Repository",
         icon: "mdi-github",
