@@ -43,4 +43,5 @@ router.beforeEach((to, _from, next) => {
 router.afterEach((to, from) => {
   goTo(0, { duration: 0 });
 });
+
 export default router;
