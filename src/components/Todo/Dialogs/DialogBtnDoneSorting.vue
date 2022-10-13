@@ -2,7 +2,7 @@
   <v-btn
     @click="$store.commit('toggleSorting')"
     class="btn-done-sorting"
-    color="primary"
+    color="teal darken-4 white--text"
     >Done Sorting</v-btn
   >
 </template>

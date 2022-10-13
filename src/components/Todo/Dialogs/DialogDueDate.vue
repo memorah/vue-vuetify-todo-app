@@ -8,8 +8,8 @@
   >
     <v-date-picker v-model="date" scrollable>
       <v-spacer></v-spacer>
-      <v-btn text color="primary" @click="$emit('close')"> Cancel </v-btn>
-      <v-btn text color="primary" @click="saveTask"> OK </v-btn>
+      <v-btn text color="teal darken-4" @click="$emit('close')"> Cancel </v-btn>
+      <v-btn text color="teal darken-4" @click="saveTask"> OK </v-btn>
     </v-date-picker>
   </v-dialog>
 </template>

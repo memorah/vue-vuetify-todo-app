@@ -7,13 +7,13 @@
       <v-text-field v-model="taskTitle" @keyup.enter="saveTask" class="px-6" />
       <v-card-actions>
         <v-spacer></v-spacer>
-        <v-btn color="green darken-1" text @click="$emit('close')">
+        <v-btn color="teal darken-4" text @click="$emit('close')">
           Cancel
         </v-btn>
         <v-btn
           @click="saveTask"
           :disabled="taskTitleInvalid"
-          color="green darken-1"
+          color="teal darken-4"
           text
         >
           Save
