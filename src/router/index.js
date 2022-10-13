@@ -4,6 +4,8 @@ import ToDo from "../views/ToDo.vue";
 import goTo from "vuetify/lib/services/goto";
 
 Vue.use(VueRouter);
+/* Vue Router is not meant to handle absolute urls. */
+/* So whenever we want to deal with those, we can use this.$router.absUrl(url) */
 
 const routes = [
   {
@@ -20,8 +22,14 @@ const routes = [
     component: () =>
       import(/* webpackChunkName: "about" */ "../views/AboutView.vue"),
   },
+  {
+    path: "/mackov-dev",
+    // eslint-disable-next-line no-unused-vars
+    beforeEnter(to, from, next) {
+      window.location.href = "https://mackov.dev";
+    },
+  },
 ];
-
 const router = new VueRouter({
   mode: "history",
   base: process.env.BASE_URL,

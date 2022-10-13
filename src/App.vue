@@ -23,6 +23,21 @@
             <v-list-item-title>{{ item.title }}</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
+        <v-list-item
+          color="white"
+          v-for="link in links"
+          :key="link.title"
+          :href="link.to"
+          target="blank"
+        >
+          <v-list-item-icon>
+            <v-icon>{{ link.icon }}</v-icon>
+          </v-list-item-icon>
+
+          <v-list-item-content>
+            <v-list-item-title>{{ link.title }}</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
       </v-list>
     </v-navigation-drawer>
 
@@ -43,10 +58,9 @@
       </template>
       <v-container class="header-container px-0">
         <v-row>
-          <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
-
-          <v-spacer></v-spacer>
           <search />
+          <v-spacer></v-spacer>
+          <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
         </v-row>
         <v-row>
           <v-app-bar-title class="text-h4 ml-3"
@@ -76,6 +90,14 @@ export default {
     items: [
       { title: "ToDo", icon: "mdi-format-list-checks", to: "/" },
       { title: "About", icon: "mdi-help-box", to: "/about" },
+    ],
+    links: [
+      { title: "mackov.dev", icon: "mdi-link-variant", to: "/mackov-dev" },
+      {
+        title: "Repository",
+        icon: "mdi-github",
+        to: "https://github.com/memorah/vue-vuetify-todo-app",
+      },
     ],
   }),
   mounted() {
