@@ -1,8 +1,20 @@
 <template>
   <v-app id="inspire">
-    <v-navigation-drawer v-model="drawer" app :mobile-breakpoint="768">
+    <v-navigation-drawer
+      right
+      v-model="drawer"
+      app
+      :mobile-breakpoint="768"
+      class="menu-drawer"
+    >
       <v-list dense nav>
-        <v-list-item v-for="item in items" :key="item.title" :to="item.to" link>
+        <v-list-item
+          color="white"
+          v-for="item in items"
+          :key="item.title"
+          :to="item.to"
+          link
+        >
           <v-list-item-icon>
             <v-icon>{{ item.icon }}</v-icon>
           </v-list-item-icon>
@@ -78,7 +90,11 @@ export default {
   },
 };
 </script>
-<style lang="sass">
+<style lang="sass" scoped>
 .header-container
  max-width: none!important
+.menu-drawer
+ background-color: #152223!important
+.theme--light.v-list-item:not(.v-list-item--active):not(.v-list-item--disabled),.theme--light.v-icon
+  color: rgba(299, 299, 299, 0.87)
 </style>
