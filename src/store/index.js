@@ -9,6 +9,13 @@ export default new Vuex.Store({
   state: {
     appTitle: process.env.VUE_APP_TITLE,
     search: null,
+    profile: [
+      {
+        name: "unknown",
+        city: "null",
+        avatar: "null",
+      },
+    ],
     tasks: [
       {
         id: 1,
