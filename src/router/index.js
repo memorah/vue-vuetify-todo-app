@@ -14,20 +14,13 @@ const routes = [
     component: ToDo,
   },
   {
-    path: "/about",
+    path: "/About",
     name: "About",
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () =>
       import(/* webpackChunkName: "about" */ "../views/AboutView.vue"),
-  },
-  {
-    path: "/mackov-dev",
-    // eslint-disable-next-line no-unused-vars
-    beforeEnter(to, from, next) {
-      window.location.href = "https://mackov.dev";
-    },
   },
 ];
 const router = new VueRouter({
