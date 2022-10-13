@@ -41,5 +41,8 @@ export default {
 <style lang="sass">
 .field-add-task.v-input--is-focused
   .v-input__slot
-    background: #1d2928 !important
+    background: #004D40 !important
+.field-add-task
+  .v-input__slot
+    background: #004D40 !important
 </style>
