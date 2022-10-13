@@ -1,19 +1,6 @@
 <template>
   <v-app id="inspire">
     <v-navigation-drawer v-model="drawer" app :mobile-breakpoint="768">
-      <v-img
-        class="pa-4 pt-7"
-        src="@/assets/header-img.jpg"
-        height="170"
-        gradient="to top right, rgba(0,0,0,0.8), rgba(0,0,0,0)"
-      >
-        <v-avatar size="60" class="mb-2">
-          <img src="https://i.pravatar.cc/" alt="avatar" />
-        </v-avatar>
-        <div class="white--text text-subtitle-1 font-weight-bold">John Doe</div>
-        <div class="white--text text-subtitle-2">Bratislava</div>
-      </v-img>
-
       <v-list dense nav>
         <v-list-item v-for="item in items" :key="item.title" :to="item.to" link>
           <v-list-item-icon>
