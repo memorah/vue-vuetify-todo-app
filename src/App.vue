@@ -2,6 +2,7 @@
   <v-app id="inspire">
     <v-navigation-drawer
       right
+      bottom
       v-model="drawer"
       app
       :mobile-breakpoint="768"
@@ -123,4 +124,7 @@ export default {
  background-color: #004D40!important
 .theme--light.v-list-item:not(.v-list-item--active):not(.v-list-item--disabled),.theme--light.v-icon
   color: rgba(299, 299, 299, 0.87)
+.v-navigation-drawer--bottom.v-navigation-drawer--is-mobile
+  min-width: 90%
+  left: 5vw
 </style>
